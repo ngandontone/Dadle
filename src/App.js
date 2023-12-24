@@ -2,7 +2,11 @@ import {useEffect, useState} from "react";
 import Dadle from "./components/Dadle";
 
 function App() {
-  const [allValues, setAllValues] = useState({question: "", answer: ""});
+  const [allValues, setAllValues] = useState({
+    question: "",
+    answer: "",
+    length: "",
+  });
   useEffect(() => {
     fetch("http://localhost:3001/solutions")
       .then((res) => res.json())
@@ -12,6 +16,7 @@ function App() {
         setAllValues({
           question: randomSolution.question,
           answer: randomSolution.answer,
+          wordLength: randomSolution.answer.length,
         });
       });
   }, [setAllValues]);
@@ -19,8 +24,13 @@ function App() {
     <div className="App">
       <h1>Dadle</h1>
       <h2>{allValues.question}</h2>
+      <h2>{allValues.wordLength}</h2>
       {allValues.answer && allValues.question && (
-        <Dadle solution={allValues.answer} question={allValues.question} />
+        <Dadle
+          solution={allValues.answer}
+          question={allValues.question}
+          wordLength={allValues.wordLength}
+        />
       )}
     </div>
   );

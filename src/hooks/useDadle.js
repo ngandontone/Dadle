@@ -1,13 +1,12 @@
 import {useState} from "react";
 
-const useDadle = (solution) => {
+const useDadle = (solution, wordLength) => {
   const [turn, setTurn] = useState(0);
   const [currentGuess, setCurrentGuess] = useState("");
   const [guesses, setGuesses] = useState([...Array(6)]); // each guess is an array
   const [history, setHistory] = useState([]); // each guess is a string
   const [isCorrect, setIsCorrect] = useState(false);
   const [usedKeys, setUsedKeys] = useState({}); // {a: 'green', b: 'yellow', c: 'grey'}
-
   // format a guess into an array of letter objects
   // e.g. [{key: 'a', color: 'yellow'}]
   const formatGuess = () => {
@@ -97,8 +96,8 @@ const useDadle = (solution) => {
         return;
       }
       // check word is 5 chars long
-      if (currentGuess.length !== 5) {
-        console.log("Word must be 5 characters long");
+      if (currentGuess.length !== wordLength) {
+        console.log("Guess is not long enough");
         return;
       }
       const formatted = formatGuess();
@@ -113,7 +112,7 @@ const useDadle = (solution) => {
     }
 
     if (/^[A-Za-z]$/.test(key)) {
-      if (currentGuess.length < 5) {
+      if (currentGuess.length < wordLength) {
         setCurrentGuess((prev) => {
           return prev + key;
         });
@@ -121,7 +120,14 @@ const useDadle = (solution) => {
     }
   };
 
-  return {turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyup};
+  return {
+    turn,
+    currentGuess,
+    guesses,
+    isCorrect,
+    usedKeys,
+    handleKeyup,
+  };
 };
 
 export default useDadle;

@@ -4,9 +4,9 @@ import Grid from "./Grid";
 import Keypad from "./Keypad";
 import Modal from "./Modal";
 
-export default function Dadle({solution}) {
+export default function Dadle({solution, wordLength}) {
   const {currentGuess, handleKeyup, guesses, isCorrect, turn, usedKeys} =
-    useDadle(solution);
+    useDadle(solution, wordLength);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
@@ -30,7 +30,12 @@ export default function Dadle({solution}) {
       {/* <div>question - {question}</div> */}
       <div>solution - {solution}</div>
       <div>current guess - {currentGuess}</div>
-      <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
+      <Grid
+        currentGuess={currentGuess}
+        guesses={guesses}
+        turn={turn}
+        wordLength={wordLength}
+      />
       <Keypad usedKeys={usedKeys} />
       {showModal && (
         <Modal isCorrect={isCorrect} turn={turn} solution={solution} />

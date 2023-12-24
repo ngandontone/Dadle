@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Row({guess, currentGuess}) {
+export default function Row({guess, currentGuess, wordLength}) {
   if (guess) {
     return (
       <div className="row past">
@@ -23,19 +23,16 @@ export default function Row({guess, currentGuess}) {
             {letter}
           </div>
         ))}
-        {[...Array(5 - letters.length)].map((_, i) => (
+        {[...Array(wordLength - letters.length)].map((_, i) => (
           <div key={i}></div>
         ))}
       </div>
     );
   }
-  return (
-    <div className="row">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  );
+
+  var divs = [];
+  for (var i = 0; i < wordLength; i++) {
+    divs.push(<div key={i}></div>);
+  }
+  return <div className="row">{divs}</div>;
 }

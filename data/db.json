@@ -28,6 +28,11 @@
     {"key": "z"}
   ],
   "solutions": [
-    {"id": 1, "question": "What's brown and sticky?", "answer": "stick"}
+    {"id": 1, "question": "What's brown and sticky?", "answer": "stick"},
+    {
+      "id": 2,
+      "question": "What do you call a fake noodle?",
+      "answer": "Animpasta"
+    }
   ]
 }
