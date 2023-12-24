@@ -111,7 +111,10 @@ const useDadle = (solution, wordLength) => {
       return;
     }
 
-    if (/^[A-Za-z]$/.test(key)) {
+    // /^[a-zA-Z\s]*$/
+    // /^[A-Za-z]$/
+
+    if (/^[a-z\s]+$/.test(key)) {
       if (currentGuess.length < wordLength) {
         setCurrentGuess((prev) => {
           return prev + key;

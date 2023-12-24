@@ -15,11 +15,19 @@ export default function Keypad({usedKeys}) {
       {letters &&
         letters.map((l) => {
           const color = usedKeys[l.key];
-          return (
-            <div key={l.key} className={color}>
-              {l.key}
-            </div>
-          );
+          if (l.key != " ") {
+            return (
+              <div key={l.key} className={color}>
+                {l.key}
+              </div>
+            );
+          } else {
+            return (
+              <div key={l.key} className={color} id="space">
+                SPACE
+              </div>
+            );
+          }
         })}
     </div>
   );

@@ -25,14 +25,15 @@
     {"key": "w"},
     {"key": "x"},
     {"key": "y"},
-    {"key": "z"}
+    {"key": "z"},
+    {"key": " "}
   ],
   "solutions": [
     {"id": 1, "question": "What's brown and sticky?", "answer": "stick"},
     {
       "id": 2,
       "question": "What do you call a fake noodle?",
-      "answer": "Animpasta"
+      "answer": "an impasta"
     }
   ]
 }
