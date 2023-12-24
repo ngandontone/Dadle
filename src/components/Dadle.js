@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react";
-import useWordle from "../hooks/useWordle";
+import useDadle from "../hooks/useDadle";
 import Grid from "./Grid";
 import Keypad from "./Keypad";
 import Modal from "./Modal";
 
-export default function Wordle({solution}) {
+export default function Dadle({solution}) {
   const {currentGuess, handleKeyup, guesses, isCorrect, turn, usedKeys} =
-    useWordle(solution);
+    useDadle(solution);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
@@ -27,6 +27,7 @@ export default function Wordle({solution}) {
 
   return (
     <div>
+      {/* <div>question - {question}</div> */}
       <div>solution - {solution}</div>
       <div>current guess - {currentGuess}</div>
       <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
