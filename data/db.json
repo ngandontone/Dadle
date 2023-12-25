@@ -29,11 +29,41 @@
     {"key": " "}
   ],
   "solutions": [
-    {"id": 1, "question": "What's brown and sticky?", "answer": "stick"},
+    {"id": 1, "question": "What's brown and sticky?", "answer": "a stick"},
     {
       "id": 2,
       "question": "What do you call a fake noodle?",
       "answer": "an impasta"
+    },
+    {
+      "id": 3,
+      "question": "How does the moon cut his hair?",
+      "answer": "eclipse it"
+    },
+    {
+      "id": 4,
+      "question": "What do you call a factory that makes okay products?",
+      "answer": "a satisfactory"
+    },
+    {
+      "id": 5,
+      "question": "What do you call a fish wearing a bowtie?",
+      "answer": "sofishticated"
+    },
+    {
+      "id": 6,
+      "question": "What kind of car does an egg drive?",
+      "answer": "a yolkswagen"
+    },
+    {
+      "id": 7,
+      "question": "How many tickles does it take to make an octopus laugh?",
+      "answer": "ten tickles"
+    },
+    {
+      "id": 8,
+      "question": "What does a bee use to brush its hair?",
+      "answer": "a honeycomb"
     }
   ]
 }

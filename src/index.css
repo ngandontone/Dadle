@@ -116,6 +116,10 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+div > img {
+  width: 200px;
+  height: 200px;
+}
 /* animations */
 @keyframes flip {
   0% {

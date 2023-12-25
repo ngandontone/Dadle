@@ -96,10 +96,10 @@ const useDadle = (solution, wordLength) => {
         return;
       }
       // check word is 5 chars long
-      if (currentGuess.length !== wordLength) {
-        console.log("Guess is not long enough");
-        return;
-      }
+      // if (currentGuess.length !== wordLength) {
+      //   console.log("Guess is not long enough");
+      //   return;
+      // }
       const formatted = formatGuess();
       addNewGuess(formatted);
     }

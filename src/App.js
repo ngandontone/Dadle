@@ -24,7 +24,6 @@ function App() {
     <div className="App">
       <h1>Dadle</h1>
       <h2>{allValues.question}</h2>
-      <h2>{allValues.wordLength}</h2>
       {allValues.answer && allValues.question && (
         <Dadle
           solution={allValues.answer}

@@ -28,8 +28,8 @@ export default function Dadle({solution, wordLength}) {
   return (
     <div>
       {/* <div>question - {question}</div> */}
-      <div>solution - {solution}</div>
-      <div>current guess - {currentGuess}</div>
+      {/* <div>solution - {solution}</div>
+      <div>current guess - {currentGuess}</div> */}
       <Grid
         currentGuess={currentGuess}
         guesses={guesses}
