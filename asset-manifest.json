@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Dadle/static/css/main.14610cf3.css",
+    "main.js": "/Dadle/static/js/main.9dffaedd.js",
+    "static/media/sadMark.JPG": "/Dadle/static/media/sadMark.1aefe63263ab39f0ed1e.JPG",
+    "static/media/happyMark.JPG": "/Dadle/static/media/happyMark.778b93e8d24af02d762a.JPG",
+    "index.html": "/Dadle/index.html",
+    "main.14610cf3.css.map": "/Dadle/static/css/main.14610cf3.css.map",
+    "main.9dffaedd.js.map": "/Dadle/static/js/main.9dffaedd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14610cf3.css",
+    "static/js/main.9dffaedd.js"
+  ]
+}
